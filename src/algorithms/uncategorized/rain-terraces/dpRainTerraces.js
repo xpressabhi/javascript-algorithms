@@ -12,7 +12,8 @@ export default function dpRainTerraces(terraces) {
   const rightMaxLevels = new Array(terraces.length).fill(0);
 
   // Calculate the highest terrace level from the LEFT relative to the current terrace.
-  [leftMaxLevels[0]] = terraces;
+  //[leftMaxLevels[0]] = terraces; this works , I am not sure how?
+  leftMaxLevels[0] = terraces[0];
   for (let terraceIndex = 1; terraceIndex < terraces.length; terraceIndex += 1) {
     leftMaxLevels[terraceIndex] = Math.max(
       terraces[terraceIndex],
